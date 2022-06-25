@@ -1,0 +1,549 @@
+.version sol 0.61.2
+
+.macro constructor
+DROP
+GETGLOB 2
+ISNULL
+IFREF {
+	CALL $c4_to_c7_with_init_storage$
+}
+GETGLOB 6
+THROWIF 51
+ENDS
+.loc main.sol, 6
+ACCEPT
+.loc main.sol, 0
+CALLREF {
+	CALL $c7_to_c4$
+}
+THROW 0
+
+.macro seqno
+DROP
+GETGLOB 6
+THROWIFNOT 76
+GETGLOB 2
+ISNULL
+IFREF {
+	CALL $c4_to_c7$
+}
+.loc main.sol, 9
+ENDS
+.loc main.sol, 0
+CALLREF {
+	CALL $seqno_internal_macro$
+}
+OVER
+PUSHCONT {
+	PUSH S3
+	CTOS
+	LDU 2
+	LDMSGADDR
+	DROP
+	NIP
+	NEWC
+	STSLICECONST xc
+	STSLICE
+	PUSHINT 3818186769
+	STUR 130
+	STU 32
+	ENDC
+	PUSHINT 0
+	SENDRAWMSG
+}
+PUSHCONT {
+	DROP
+}
+IFELSE
+DROP
+CALLREF {
+	CALL $c7_to_c4$
+}
+THROW 0
+
+.macro seqno_internal_macro
+.loc main.sol, 10
+ACCEPT
+.loc main.sol, 11
+SEQNO
+.loc main.sol, 0
+
+.macro find_by_init_code_hash
+DROP
+GETGLOB 6
+THROWIFNOT 76
+GETGLOB 2
+ISNULL
+IFREF {
+	CALL $c4_to_c7$
+}
+.loc main.sol, 14
+LDU 256
+ENDS
+.loc main.sol, 0
+CALLREF {
+	CALL $find_by_init_code_hash_internal_macro$
+}
+OVER
+PUSHCONT {
+	PUSH S3
+	CTOS
+	LDU 2
+	LDMSGADDR
+	DROP
+	NIP
+	NEWC
+	STSLICECONST xc
+	STSLICE
+	PUSHINT 3241923830
+	STUR 130
+	STREF
+	ENDC
+	PUSHINT 0
+	SENDRAWMSG
+}
+PUSHCONT {
+	DROP
+}
+IFELSE
+DROP
+CALLREF {
+	CALL $c7_to_c4$
+}
+THROW 0
+
+.macro find_by_init_code_hash_internal_macro
+.loc main.sol, 14
+DROP
+PUSHREF {
+}
+.loc main.sol, 15
+ACCEPT
+.loc main.sol, 0
+
+.macro find_by_code_hash
+DROP
+GETGLOB 6
+THROWIFNOT 76
+GETGLOB 2
+ISNULL
+IFREF {
+	CALL $c4_to_c7$
+}
+.loc main.sol, 18
+LDU 256
+ENDS
+.loc main.sol, 0
+CALLREF {
+	CALL $find_by_code_hash_internal_macro$
+}
+OVER
+PUSHCONT {
+	PUSH S3
+	CTOS
+	LDU 2
+	LDMSGADDR
+	DROP
+	NIP
+	NEWC
+	STSLICECONST xc
+	STSLICE
+	PUSHINT 3681703457
+	STUR 130
+	STREF
+	ENDC
+	PUSHINT 0
+	SENDRAWMSG
+}
+PUSHCONT {
+	DROP
+}
+IFELSE
+DROP
+CALLREF {
+	CALL $c7_to_c4$
+}
+THROW 0
+
+.macro find_by_code_hash_internal_macro
+.loc main.sol, 18
+DROP
+PUSHREF {
+}
+.loc main.sol, 19
+ACCEPT
+.loc main.sol, 0
+
+.macro find_by_data_hash
+DROP
+GETGLOB 6
+THROWIFNOT 76
+GETGLOB 2
+ISNULL
+IFREF {
+	CALL $c4_to_c7$
+}
+.loc main.sol, 22
+LDU 256
+ENDS
+.loc main.sol, 0
+CALLREF {
+	CALL $find_by_data_hash_internal_macro$
+}
+OVER
+PUSHCONT {
+	PUSH S3
+	CTOS
+	LDU 2
+	LDMSGADDR
+	DROP
+	NIP
+	NEWC
+	STSLICECONST xc
+	STSLICE
+	PUSHINT 2911617365
+	STUR 130
+	STREF
+	ENDC
+	PUSHINT 0
+	SENDRAWMSG
+}
+PUSHCONT {
+	DROP
+}
+IFELSE
+DROP
+CALLREF {
+	CALL $c7_to_c4$
+}
+THROW 0
+
+.macro find_by_data_hash_internal_macro
+.loc main.sol, 22
+DROP
+PUSHREF {
+}
+.loc main.sol, 23
+ACCEPT
+.loc main.sol, 0
+
+.macro tryelect
+DROP
+GETGLOB 6
+THROWIFNOT 76
+GETGLOB 2
+ISNULL
+IFREF {
+	CALL $c4_to_c7$
+}
+.loc main.sol, 26
+ENDS
+.loc main.sol, 0
+CALLREF {
+	CALL $tryelect_internal_macro$
+}
+DROP
+CALLREF {
+	CALL $c7_to_c4$
+}
+THROW 0
+
+.macro tryelect_internal_macro
+.loc main.sol, 27
+ACCEPT
+.loc main.sol, 0
+
+.macro initcodehash
+DROP
+GETGLOB 6
+THROWIFNOT 76
+GETGLOB 2
+ISNULL
+IFREF {
+	CALL $c4_to_c7$
+}
+.loc main.sol, 30
+ENDS
+.loc main.sol, 0
+CALLREF {
+	CALL $initcodehash_internal_macro$
+}
+OVER
+PUSHCONT {
+	PUSH S3
+	CTOS
+	LDU 2
+	LDMSGADDR
+	DROP
+	NIP
+	NEWC
+	STSLICECONST xc
+	STSLICE
+	PUSHINT 2575434804
+	STUR 130
+	STU 256
+	ENDC
+	PUSHINT 0
+	SENDRAWMSG
+}
+PUSHCONT {
+	DROP
+}
+IFELSE
+DROP
+CALLREF {
+	CALL $c7_to_c4$
+}
+THROW 0
+
+.macro initcodehash_internal_macro
+.loc main.sol, 31
+ACCEPT
+.loc main.sol, 32
+INITCODEHASH
+.loc main.sol, 0
+
+.macro storagefee
+DROP
+GETGLOB 6
+THROWIFNOT 76
+GETGLOB 2
+ISNULL
+IFREF {
+	CALL $c4_to_c7$
+}
+.loc main.sol, 35
+ENDS
+.loc main.sol, 0
+CALLREF {
+	CALL $storagefee_internal_macro$
+}
+OVER
+PUSHCONT {
+	PUSH S3
+	CTOS
+	LDU 2
+	LDMSGADDR
+	DROP
+	NIP
+	NEWC
+	STSLICECONST xc
+	STSLICE
+	PUSHINT 2979080752
+	STUR 130
+	STU 64
+	ENDC
+	PUSHINT 0
+	SENDRAWMSG
+}
+PUSHCONT {
+	DROP
+}
+IFELSE
+DROP
+CALLREF {
+	CALL $c7_to_c4$
+}
+THROW 0
+
+.macro storagefee_internal_macro
+.loc main.sol, 36
+ACCEPT
+.loc main.sol, 37
+STORAGEFEE
+.loc main.sol, 0
+
+.macro c4_to_c7
+PUSHROOT
+CTOS
+LDU 256 ; pubkey c4
+LDU 64 ; pubkey timestamp c4
+LDU 1 ; ctor flag
+NIP
+ENDS
+SETGLOB 3
+SETGLOB 2
+
+.macro c4_to_c7_with_init_storage
+PUSHROOT
+CTOS
+SBITS
+GTINT 1
+PUSHCONT {
+	PUSHINT 0
+	PUSHROOT
+	CTOS
+	PLDDICT ; D
+	PUSHINT 64
+	DICTUGET
+	THROWIFNOT 61
+	PLDU 256
+	SETGLOB 2
+	PUSHINT 0 ; timestamp
+	SETGLOB 3
+}
+IFREFELSE {
+	CALL $c4_to_c7$
+}
+
+.macro c7_to_c4
+GETGLOB 3
+GETGLOB 2
+NEWC
+STU 256
+STU 64
+STONE
+ENDC
+POPROOT
+
+.macro upd_only_time_in_c4
+PUSHROOT
+CTOS
+LDU 256
+LDU 64
+NIP
+GETGLOB 3
+ROT
+NEWC
+STU 256
+STU 64
+STSLICE
+ENDC
+POPROOT
+
+.internal-alias :main_internal, 0
+.internal :main_internal
+PUSHREFSLICE {
+	.blob x1fec05744d558d0490519901adfc721a1ef4a3003f11206a2b25e151d62155ad
+}
+PUSHINT 0
+COPYLEFT
+PUSHROOT
+CTOS
+SBITS
+NEQINT 1
+SETGLOB 6
+PUSH S2
+CTOS
+PLDU 4
+MODPOW2 1
+IFRET
+OVER
+SEMPTY ; isEmpty
+IFJMPREF {
+	GETGLOB 6
+	THROWIFNOT 76
+}
+OVER
+LDUQ 32  ; [funcId] body' ok
+THROWIFNOT 60
+OVER
+IFNOTJMPREF {
+	GETGLOB 6
+	THROWIFNOT 76
+}
+SWAP
+CALLREF {
+	CALL $public_function_selector$
+}
+THROW 60
+
+.internal-alias :main_external, -1
+.internal :main_external
+PUSHREFSLICE {
+	.blob x1fec05744d558d0490519901adfc721a1ef4a3003f11206a2b25e151d62155ad
+}
+PUSHINT 0
+COPYLEFT
+PUSHROOT
+CTOS
+SBITS
+NEQINT 1
+SETGLOB 6
+OVER
+CALLREF {
+	CALL $c4_to_c7_with_init_storage$
+}
+LDU 1 ; haveSign msgSlice
+SWAP
+PUSHCONT {
+	PUSHPOW2 9
+	LDSLICEX ; signatureSlice msgSlice
+	DUP
+	HASHSU ; signatureSlice msgSlice hashMsgSlice
+	ROT
+	GETGLOB 2
+	CHKSIGNU ; msgSlice isSigned
+	THROWIFNOT 40
+}
+IF
+LDU 64 ; timestamp msgSlice
+SWAP
+CALL $replay_protection_macro$
+LDU 32 ; funcId body
+SWAP
+CALLREF {
+	CALL $public_function_selector$
+}
+THROW 60
+
+.macro public_function_selector
+DUP
+PUSHINT 1094440182
+LEQ
+IFJMPREF {
+	DUP
+	PUSHINT 427951156
+	EQUAL
+	IFJMPREF {
+		CALL $initcodehash$
+	}
+	DUP
+	PUSHINT 764133717
+	EQUAL
+	IFJMPREF {
+		CALL $find_by_data_hash$
+	}
+	DUP
+	PUSHINT 831597104
+	EQUAL
+	IFJMPREF {
+		CALL $storagefee$
+	}
+	DUP
+	PUSHINT 1094440182
+	EQUAL
+	IFJMPREF {
+		CALL $find_by_init_code_hash$
+	}
+}
+DUP
+PUSHINT 1756716863
+LEQ
+IFJMPREF {
+	DUP
+	PUSHINT 1534219809
+	EQUAL
+	IFJMPREF {
+		CALL $find_by_code_hash$
+	}
+	DUP
+	PUSHINT 1670703121
+	EQUAL
+	IFJMPREF {
+		CALL $seqno$
+	}
+	DUP
+	PUSHINT 1732891854
+	EQUAL
+	IFJMPREF {
+		CALL $tryelect$
+	}
+	DUP
+	PUSHINT 1756716863
+	EQUAL
+	IFJMPREF {
+		CALL $constructor$
+	}
+}
+
