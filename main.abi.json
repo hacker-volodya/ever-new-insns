@@ -15,34 +15,27 @@
 			"inputs": [
 			],
 			"outputs": [
-				{"name":"value0","type":"uint32"}
 			]
 		},
 		{
 			"name": "find_by_init_code_hash",
 			"inputs": [
-				{"name":"init_code_hash","type":"uint256"}
 			],
 			"outputs": [
-				{"name":"value0","type":"cell"}
 			]
 		},
 		{
 			"name": "find_by_code_hash",
 			"inputs": [
-				{"name":"code_hash","type":"uint256"}
 			],
 			"outputs": [
-				{"name":"value0","type":"cell"}
 			]
 		},
 		{
 			"name": "find_by_data_hash",
 			"inputs": [
-				{"name":"data_hash","type":"uint256"}
 			],
 			"outputs": [
-				{"name":"value0","type":"cell"}
 			]
 		},
 		{
@@ -66,6 +59,13 @@
 			],
 			"outputs": [
 				{"name":"value0","type":"uint64"}
+			]
+		},
+		{
+			"name": "copyleft",
+			"inputs": [
+			],
+			"outputs": [
 			]
 		}
 	],

@@ -10,7 +10,7 @@ IFREF {
 GETGLOB 6
 THROWIF 51
 ENDS
-.loc main.sol, 6
+.loc main.sol, 5
 ACCEPT
 .loc main.sol, 0
 CALLREF {
@@ -27,34 +27,12 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc main.sol, 9
+.loc main.sol, 8
 ENDS
 .loc main.sol, 0
 CALLREF {
 	CALL $seqno_internal_macro$
 }
-OVER
-PUSHCONT {
-	PUSH S3
-	CTOS
-	LDU 2
-	LDMSGADDR
-	DROP
-	NIP
-	NEWC
-	STSLICECONST xc
-	STSLICE
-	PUSHINT 3818186769
-	STUR 130
-	STU 32
-	ENDC
-	PUSHINT 0
-	SENDRAWMSG
-}
-PUSHCONT {
-	DROP
-}
-IFELSE
 DROP
 CALLREF {
 	CALL $c7_to_c4$
@@ -62,9 +40,8 @@ CALLREF {
 THROW 0
 
 .macro seqno_internal_macro
-.loc main.sol, 10
+.loc main.sol, 9
 ACCEPT
-.loc main.sol, 11
 SEQNO
 .loc main.sol, 0
 
@@ -77,35 +54,12 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc main.sol, 14
-LDU 256
+.loc main.sol, 12
 ENDS
 .loc main.sol, 0
 CALLREF {
 	CALL $find_by_init_code_hash_internal_macro$
 }
-OVER
-PUSHCONT {
-	PUSH S3
-	CTOS
-	LDU 2
-	LDMSGADDR
-	DROP
-	NIP
-	NEWC
-	STSLICECONST xc
-	STSLICE
-	PUSHINT 3241923830
-	STUR 130
-	STREF
-	ENDC
-	PUSHINT 0
-	SENDRAWMSG
-}
-PUSHCONT {
-	DROP
-}
-IFELSE
 DROP
 CALLREF {
 	CALL $c7_to_c4$
@@ -113,12 +67,9 @@ CALLREF {
 THROW 0
 
 .macro find_by_init_code_hash_internal_macro
-.loc main.sol, 14
-DROP
-PUSHREF {
-}
-.loc main.sol, 15
+.loc main.sol, 13
 ACCEPT
+FIND_BY_INIT_CODE_HASH
 .loc main.sol, 0
 
 .macro find_by_code_hash
@@ -130,35 +81,12 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc main.sol, 18
-LDU 256
+.loc main.sol, 16
 ENDS
 .loc main.sol, 0
 CALLREF {
 	CALL $find_by_code_hash_internal_macro$
 }
-OVER
-PUSHCONT {
-	PUSH S3
-	CTOS
-	LDU 2
-	LDMSGADDR
-	DROP
-	NIP
-	NEWC
-	STSLICECONST xc
-	STSLICE
-	PUSHINT 3681703457
-	STUR 130
-	STREF
-	ENDC
-	PUSHINT 0
-	SENDRAWMSG
-}
-PUSHCONT {
-	DROP
-}
-IFELSE
 DROP
 CALLREF {
 	CALL $c7_to_c4$
@@ -166,12 +94,9 @@ CALLREF {
 THROW 0
 
 .macro find_by_code_hash_internal_macro
-.loc main.sol, 18
-DROP
-PUSHREF {
-}
-.loc main.sol, 19
+.loc main.sol, 17
 ACCEPT
+FIND_BY_CODE_HASH
 .loc main.sol, 0
 
 .macro find_by_data_hash
@@ -183,35 +108,12 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc main.sol, 22
-LDU 256
+.loc main.sol, 20
 ENDS
 .loc main.sol, 0
 CALLREF {
 	CALL $find_by_data_hash_internal_macro$
 }
-OVER
-PUSHCONT {
-	PUSH S3
-	CTOS
-	LDU 2
-	LDMSGADDR
-	DROP
-	NIP
-	NEWC
-	STSLICECONST xc
-	STSLICE
-	PUSHINT 2911617365
-	STUR 130
-	STREF
-	ENDC
-	PUSHINT 0
-	SENDRAWMSG
-}
-PUSHCONT {
-	DROP
-}
-IFELSE
 DROP
 CALLREF {
 	CALL $c7_to_c4$
@@ -219,12 +121,9 @@ CALLREF {
 THROW 0
 
 .macro find_by_data_hash_internal_macro
-.loc main.sol, 22
-DROP
-PUSHREF {
-}
-.loc main.sol, 23
+.loc main.sol, 21
 ACCEPT
+FIND_BY_DATA_HASH
 .loc main.sol, 0
 
 .macro tryelect
@@ -236,7 +135,7 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc main.sol, 26
+.loc main.sol, 24
 ENDS
 .loc main.sol, 0
 CALLREF {
@@ -249,8 +148,9 @@ CALLREF {
 THROW 0
 
 .macro tryelect_internal_macro
-.loc main.sol, 27
+.loc main.sol, 25
 ACCEPT
+TRYELECT
 .loc main.sol, 0
 
 .macro initcodehash
@@ -262,7 +162,7 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc main.sol, 30
+.loc main.sol, 28
 ENDS
 .loc main.sol, 0
 CALLREF {
@@ -297,9 +197,9 @@ CALLREF {
 THROW 0
 
 .macro initcodehash_internal_macro
-.loc main.sol, 31
+.loc main.sol, 29
 ACCEPT
-.loc main.sol, 32
+.loc main.sol, 30
 INITCODEHASH
 .loc main.sol, 0
 
@@ -312,7 +212,7 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc main.sol, 35
+.loc main.sol, 33
 ENDS
 .loc main.sol, 0
 CALLREF {
@@ -347,10 +247,37 @@ CALLREF {
 THROW 0
 
 .macro storagefee_internal_macro
-.loc main.sol, 36
+.loc main.sol, 34
 ACCEPT
-.loc main.sol, 37
+.loc main.sol, 35
 STORAGEFEE
+.loc main.sol, 0
+
+.macro copyleft
+DROP
+GETGLOB 6
+THROWIFNOT 76
+GETGLOB 2
+ISNULL
+IFREF {
+	CALL $c4_to_c7$
+}
+.loc main.sol, 38
+ENDS
+.loc main.sol, 0
+CALLREF {
+	CALL $copyleft_internal_macro$
+}
+DROP
+CALLREF {
+	CALL $c7_to_c4$
+}
+THROW 0
+
+.macro copyleft_internal_macro
+.loc main.sol, 39
+ACCEPT
+COPYLEFT
 .loc main.sol, 0
 
 .macro c4_to_c7
@@ -413,11 +340,6 @@ POPROOT
 
 .internal-alias :main_internal, 0
 .internal :main_internal
-PUSHREFSLICE {
-	.blob x1fec05744d558d0490519901adfc721a1ef4a3003f11206a2b25e151d62155ad
-}
-PUSHINT 0
-COPYLEFT
 PUSHROOT
 CTOS
 SBITS
@@ -450,11 +372,6 @@ THROW 60
 
 .internal-alias :main_external, -1
 .internal :main_external
-PUSHREFSLICE {
-	.blob x1fec05744d558d0490519901adfc721a1ef4a3003f11206a2b25e151d62155ad
-}
-PUSHINT 0
-COPYLEFT
 PUSHROOT
 CTOS
 SBITS
@@ -489,7 +406,7 @@ THROW 60
 
 .macro public_function_selector
 DUP
-PUSHINT 1094440182
+PUSHINT 1029500342
 LEQ
 IFJMPREF {
 	DUP
@@ -499,10 +416,10 @@ IFJMPREF {
 		CALL $initcodehash$
 	}
 	DUP
-	PUSHINT 764133717
+	PUSHINT 471195883
 	EQUAL
 	IFJMPREF {
-		CALL $find_by_data_hash$
+		CALL $find_by_code_hash$
 	}
 	DUP
 	PUSHINT 831597104
@@ -511,27 +428,33 @@ IFJMPREF {
 		CALL $storagefee$
 	}
 	DUP
-	PUSHINT 1094440182
+	PUSHINT 1029500342
+	EQUAL
+	IFJMPREF {
+		CALL $seqno$
+	}
+}
+DUP
+PUSHINT 1732891854
+LEQ
+IFJMPREF {
+	DUP
+	PUSHINT 1131623916
 	EQUAL
 	IFJMPREF {
 		CALL $find_by_init_code_hash$
 	}
-}
-DUP
-PUSHINT 1756716863
-LEQ
-IFJMPREF {
 	DUP
-	PUSHINT 1534219809
+	PUSHINT 1539751101
 	EQUAL
 	IFJMPREF {
-		CALL $find_by_code_hash$
+		CALL $find_by_data_hash$
 	}
 	DUP
-	PUSHINT 1670703121
+	PUSHINT 1600313125
 	EQUAL
 	IFJMPREF {
-		CALL $seqno$
+		CALL $copyleft$
 	}
 	DUP
 	PUSHINT 1732891854
@@ -539,11 +462,11 @@ IFJMPREF {
 	IFJMPREF {
 		CALL $tryelect$
 	}
-	DUP
-	PUSHINT 1756716863
-	EQUAL
-	IFJMPREF {
-		CALL $constructor$
-	}
+}
+DUP
+PUSHINT 1756716863
+EQUAL
+IFJMPREF {
+	CALL $constructor$
 }
 
